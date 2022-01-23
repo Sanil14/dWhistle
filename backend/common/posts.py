@@ -64,18 +64,20 @@ def add_post(key, content, title):
 	contract_id, contract_interface = compiled_sol.popitem()
 	bytecode = contract_interface['bin']
 	abi = contract_interface['abi']
-	tx = {
-		'data': bytecode,
-		'value': 0,
-		'gas': 100000,
-		'gasPrice': w3.eth.get_block('pending')['baseFeePerGas'],
-		'nonce': acct[1]
-	}
-	acct[1]+=1
+	# tx = {
+	# 	'data': bytecode,
+	# 	'value': 0,
+	# 	'gas': 100000,
+	# 	'gasPrice': w3.eth.get_block('pending')['baseFeePerGas'],
+	# 	'nonce': acct[1]
+	# }
+	# acct[1]+=1
+	Post = w3.eth.contract(abi=abi, bytecode=bytecode)
 
-	signed = w3.eth.account.sign_transaction(tx, acct[0].key.hex())
+	# signed = w3.eth.account.sign_transaction(tx, acct[0].key.hex())
 
-	tx_hash = w3.eth.send_raw_transaction(signed.rawTransaction)
+	# tx_hash = w3.eth.send_raw_transaction(signed.rawTransaction)
+	tx_hash = Post.constructor().transact()
 	tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 	address = tx_receipt.contractAddress
 
@@ -92,14 +94,15 @@ def get_posts():
 		abi = cmtadta[1]
 		post = w3.eth.contract(address=address, abi=abi)
 
-		key = post.functions.getkey().transact()
-		content = post.functions.getcontent().transact()
-		title = post.functions.gettitle().transact()
+		key = post.functions.getkey().call()
+		content = post.functions.getcontent().call()
+		title = post.functions.gettitle().call()
 
 		keys.append(key)
-		contents.append(content.hex())
-		titles.append(title.hex())
+		contents.append(content)
+		titles.append(title)
 
+		
 	for akey in keys:
 		acct = get_account(akey)
 		if not acct:
