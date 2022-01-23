@@ -10,11 +10,14 @@ That last reason is why is project happens not to include a requirements file fo
 These can be installed as follows (assume Python and pip are in your PATH):
 
 `pip install flask-restful`
+
 `pip install web3 "web3[tester]"`
+
 `pip install py-solc-x`
 
 To complete the py-solc-x installation, 
 Start a new python prompt 
 `from solcx import install_solc`
+
 `install_solc(version='latest')`
 
