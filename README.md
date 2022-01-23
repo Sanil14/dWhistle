@@ -2,6 +2,7 @@
 
 
 ![alt text](https://cdn.discordapp.com/attachments/825403700901969931/934824961909092442/pog3.png)
+
 # DWHISTLE :milky_way:
 
 # Table Of Contents :zap:
@@ -13,11 +14,11 @@
 
 
 ## **Inspiration** :mechanical_arm:
-- Providing confidentiality . A whistleblowing platform provides a confidential service that allows employees to draw attention to any issues that they feel are inappropriate for the workplace.
-- We built a platform on the ethereum blockchain, seeking to create a decentralised platform. The user's " POSTS " will virtually remain anonymous to anybody reading the information.
+- Providing confidentiality. A whistleblowing platform provides a confidential service that allows employees to draw attention to any issues that they feel are inappropriate for the workplace.
+- We built a platform on the ethereum blockchain, seeking to create a decentralized platform. The user's " POSTS " will virtually remain anonymous to anybody reading the information.
 
 ## **What it does** :gear:
-- DWHISTLE is a decentralised application that can operate autonomously, through the use of smart contracts, that runs on a decentralized computing, blockchain system (ETHEREUM BLOCKCHAIN) .
+- DWHISTLE is a decentralized application that can operate autonomously, through the use of smart contracts, that runs on a decentralized computing, blockchain system (ETHEREUM BLOCKCHAIN) .
 - It's a platform where anyone can report (" POST ") information or activity within a private, public, or government organisation that's deemed illegal, immoral, illicit, unsafe, fraud, or misuse of taxpayer funds.
 
 ## **How we built it**
@@ -33,8 +34,5 @@ We are proud to have completed a functional, blockchain-based, secure, and anony
 We learned valuable skills in implementing Web3-based dApps, and working with blockchains and smart contracts.
 
 ## **What's next for dWhistle :hourglass:**
-- A custom blockchain network / crypto currency 🪙
-- proof-of-work implementation to verify/regulate client credibility
-
-Open Source ?
-
+- A custom blockchain network / crypto currency
+- Implement Proof of Work (PoW) to verify/regulate client credibility
