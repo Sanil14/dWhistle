@@ -1,0 +1,8 @@
+.nav {
+	display: flex;
+	border: 1px solid red;
+	height: 4em;
+}
+.btn {
+	color: white;
+}
