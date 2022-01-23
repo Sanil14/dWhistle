@@ -15,28 +15,35 @@ const Home = () => {
         if (content.length < 1) return alert("Invalid Post Content!");
         if (title.length < 1) return alert("Invalid Post Title!");
         const resp = await userService.submitPost(privateKey, title, content);
-        if (resp.success === true) return alert("Submitted Content");
         if (resp.success === false) return alert("Failed Submitting! Try again...")
+        if (resp.success === true) {
+            alert("Submitted Content");
+            setPrivateKey("")
+            setTitle("")
+            setContent("")
+            fetchPosts();
+            setSubmitHidden(true)
+        }
     }
 
-    useEffect(() => {
-        async function fetchPosts() {
-            if (posts.length < 1) {
-                let temp = [];
-                const resp = await userService.getPosts();
-                console.log(resp);
-                if (resp.address.length > 0) {
-                    for (let i = 0; i < resp.address.length; i++) {
-                        temp.push({
-                            address: resp.address[i],
-                            title: resp.title[i],
-                            content: resp.content[i]
-                        })
-                    }
-                    setPosts(temp);
-                }
+    async function fetchPosts() {
+        let temp = [];
+        const resp = await userService.getPosts();
+        console.log(resp);
+        if (resp.address.length > 0) {
+            for (let i = 0; i < resp.address.length; i++) {
+                temp.push({
+                    address: resp.address[i],
+                    title: resp.title[i],
+                    content: resp.content[i]
+                })
             }
+            setPosts(temp);
         }
+    }
+
+
+    useEffect(() => {
         fetchPosts();
     }, [])
 
