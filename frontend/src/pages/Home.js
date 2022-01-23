@@ -92,6 +92,13 @@ const Home = () => {
             {
                 posts.length > 0 && posts.map((p) => <Post title={p.title} content={p.content} address={p.address} />)
             }
+            {
+                posts.length < 1 && (
+                    <div className="flex flex-row text-center py-10">
+                        <span className="text-2xl text-slate-500">Post something to see it here!</span>
+                    </div>
+                )
+            }
         </>
     )
 }
