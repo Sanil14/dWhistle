@@ -1,8 +1,9 @@
 import React from "react";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import Home from "../pages/Home";
-import Navbar from "./navbar";
 import "../styles/global.css"
+import Navbar from "./navbar";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
 
 const Root = () => {
     return (
@@ -10,6 +11,7 @@ const Root = () => {
             <Navbar>
                 <Routes>
                     <Route exact path="/" element={<Home />}></Route>
+                    <Route exact path="/login" element={<Login />}></Route>
                 </Routes>
             </Navbar>
         </Router>
