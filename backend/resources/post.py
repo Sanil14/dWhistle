@@ -9,7 +9,7 @@ class Post(Resource):
 
 		args = parser.parse_args()
 		print({'data': args['data'], 'key': args['key']})
-		return 201
+		return {'success': True}, 201
 	
 	def get(self):
 		return {1: 'data1', 2: 'data2'}
