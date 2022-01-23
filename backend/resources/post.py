@@ -19,8 +19,7 @@ class Post(Resource):
 		return {'success': True}, 201
 	
 	def get(self):
-		address, title, content = get_posts()
+		address, content, title = get_posts()
 
-		print(type(title[0]), type(content[0]))
 
 		return {'address': address, 'title': title, 'content': content}
