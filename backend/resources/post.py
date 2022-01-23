@@ -15,7 +15,6 @@ class Post(Resource):
 			return {'success': False}, 200
 		
 		add_post(key, args['content'], args['title'])
-		print({'title': args['title'], 'content': args['content'] ,'key': args['key']})
 		return {'success': True}, 201
 	
 	def get(self):

@@ -1,6 +1,6 @@
 from common._chain import w3, account_list
 from web3 import Web3
-# from _chain import w3, account_list
+
 
 def create_account():
 	global w3
@@ -22,15 +22,7 @@ def create_account():
 
 def get_account(key):
 	global account_list
-	print(account_list)
 	for acct in account_list:
-		# print(type(key))
-		# print(type(acct[0].key.hex()))
-		# print(type(acct[0].address))
-		# print(key)
-		# print(acct[0].key.hex())
-		# print(acct[0].key.hex() == key)
-		# print(acct[0].key.hex() is key)
 		if acct[0].key.hex() == key:
 			return acct
 
