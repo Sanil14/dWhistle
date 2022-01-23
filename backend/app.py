@@ -1,7 +1,4 @@
-# import os
-# os.chdir(os.path.dirname(os.getcwd()))
-
-from flask import Flask, Blueprint
+from flask import Flask
 from flask_restful import Api, Resource, url_for
 from resources.post import Post
 from resources.user import User
