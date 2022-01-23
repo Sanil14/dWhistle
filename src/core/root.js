@@ -7,10 +7,11 @@ import "../styles/global.css"
 const Root = () => {
     return (
         <Router>
-            <Navbar />
-            <Routes>
-                <Route exact path="/" element={<Home />}></Route>
-            </Routes>
+            <Navbar>
+                <Routes>
+                    <Route exact path="/" element={<Home />}></Route>
+                </Routes>
+            </Navbar>
         </Router>
     )
 }

@@ -2,7 +2,9 @@ import React from "react";
 
 const Home = () => {
     return (
-        <h1>Hello World</h1>
+        <>
+        <input className="rounded h-16 w-1/2 text-4xl p-4" placeholder="Submit A Post..."/>
+        </>
     )
 }
 
