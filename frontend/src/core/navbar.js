@@ -29,8 +29,8 @@ const Navbar = ({ children }) => {
 				</div>
 			</div>
 			{/* Sidebar ends */}
-			<div className="py-10 h-fit px-6">
-				<div className="w-full h-fit rounded bg-slate-200 p-10 text-bl">
+			<div className="py-2 h-fit px-6">
+				<div className="w-full h-fit text-bl">
 					{children}
 				</div>
 			</div>
