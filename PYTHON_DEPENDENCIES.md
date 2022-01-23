@@ -16,7 +16,8 @@ These can be installed as follows (assume Python and pip are in your PATH):
 `pip install py-solc-x`
 
 To complete the py-solc-x installation, 
-Start a new python prompt 
+Start a new python prompt, then:
+
 `from solcx import install_solc`
 
 `install_solc(version='latest')`
