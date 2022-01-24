@@ -7,6 +7,10 @@ contracts = []
 def add_post(key, content, title):
 	global account_list
 	global contracts
+	for char in content:
+		# escape newlines
+		if char == '\n':
+			content = content.replace(char, '\\n')
 	compiled_sol = compile_source(
 		'''
 		// SPDX-License-Identifier: UNLICENSED
