@@ -1,4 +1,4 @@
-from common._chain import w3, account_list
+from common._globals import w3, account_list
 from web3 import Web3
 
 
